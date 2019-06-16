@@ -1,0 +1,36 @@
+<div class = "container" >
+<div class="jumbotron">
+     <h1>Mongo Scraper</h1>
+       <h3>New York Times Edition</h3>
+       <a href="/scrape"> <button type="button" class="btn btn-danger scrape" > Scrape for Articles </button></a>
+</div>
+<div class="article-container">
+
+    {{#each Article}}
+  <div class="row">
+
+<div class="panel panel-primary">
+  <div class="panel-heading">{{this.title}}
+    <a href="/notes/{{this._id}}">
+    <button type="button" class="btn btn-warning save-article" >Save Article</button> </a>
+  </div>
+  <div class="panel-body">
+    <a href= "{{this.link}}" target="_blank"> {{this.link}}</a>
+  </div>
+</div>
+<div class="panel-summary">{{this.summary}}
+
+</div>
+    </div>
+ {{/each}}
+</div>
+
+
+<!-- Footer -->
+<footer class="footer container">
+<a href="/">Home</a>
+</footer>
+
+</div>
+<script>
+</script>
